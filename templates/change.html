@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+       <form method="POST" action="{{ url_for('change') }}" enctype="multipart/form-data">
+            <strong>Change image:</strong><br><br>
+            Sifra slike koja se menja: <input type="text" name="img_id"><br><br>
+            Izaberi sliku: <input type="file" name="file"><br><br>
+            <input type="submit" value="Upload and Change!" id="upload-button">
+        </form>
+    </div>
+{%endblock %}

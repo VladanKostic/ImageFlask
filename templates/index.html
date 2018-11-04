@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <div>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="inputFile">
-        <button type="submit">Submit</button>
-    </form>
+        <p>Zdravo svima, operacije sa slikama je web aplikacija radjena u python/flask razvojnom okruzenju.
+           <br>
+           Omigucava Vam neke od jednostavnih operacija sa postavkom prikazom i zamenom slike
+        </p>
     </div>
-</form>
-</body>
-</html>
+{%endblock %}
