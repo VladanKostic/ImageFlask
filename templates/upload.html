@@ -3,9 +3,8 @@
 {% block content %}
     <div>
        <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-            <strong>Files:</strong><br>
-            <input id="file-picker" type="file" name="file" accept="image/*" multiple>
-            <div id="msg"></div>
+            Select image <input id="file-picker" type="file" name="file"><br>
+            <div id="msg"></div><br>
             <input type="submit" value="Upload!" id="upload-button">
         </form>
     </div>
@@ -17,19 +16,17 @@
 
         for (var i=0; i<input.files.length; i++)
         {
-        //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
             var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
 
             if ((ext == 'jpg') || (ext == 'png'))
             {
-                $("#msg").text("Files are supported")
+                $("#msg").text("Files on this format are supported!")
             }
             else
             {
-                $("#msg").text("Files are NOT supported")
+                $("#msg").text("Files on this format are NOT supported!")
                 document.getElementById("file-picker").value ="";
             }
-
         }
 
 

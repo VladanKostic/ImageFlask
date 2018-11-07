@@ -5,9 +5,9 @@
     </head>
     <body>
         <div>
-            <a href="{{ url_for('up') }}">Postavi sliku</a>
-            <a href="{{ url_for('show') }}">Prikazi sliku</a>
-            <a href="{{ url_for('ch') }}">Promeni sliku</a>
+            <a href="{{ url_for('up') }}">Upload image</a>
+            <a href="{{ url_for('show') }}">Show image</a>
+            <a href="{{ url_for('ch') }}">Change image</a>
          </div>
         <hr>
         {% with messages = get_flashed_messages() %}
