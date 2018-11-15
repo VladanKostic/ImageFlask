@@ -3,7 +3,8 @@
 {% block content %}
     <div>
        <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-            Select image <input id="file-picker" type="file" name="file"><br>
+            Input name for new person:<input type="text" name="person"><br><br>
+            Select image: <input id="file-picker" type="file" name="file"><br>
             <div id="msg"></div><br>
             <input type="submit" value="Upload!" id="upload-button">
         </form>

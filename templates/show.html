@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form action="" method="post" novalidate>
+    <form action="" method="POST" novalidate>
+        Show image:<br>
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.choice_of_image.label }}<br>
-            {{ form.choice_of_image }}<br>
-            {% for error in form.choice_of_image.errors %}
-            <span style="color: red;">[{{ error }}]</span>
+        {{ form.opts() }}
+        <ul>
+            {% for error in form.opts.errors %}
+            <li> style="color:red;">{{ error }}</li>
             {% endfor %}
-        </p>
-        <p>{{ form.submit() }}</p>
+        </ul>
+        <input type="submit">
     </form>
 {%endblock %}

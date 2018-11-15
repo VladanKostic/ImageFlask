@@ -3,7 +3,14 @@
 {% block content %}
     <div>
        <form method="POST" action="{{ url_for('change') }}" enctype="multipart/form-data">
-            Key of image for change: <input type="text" name="img_id"><br><br>
+        Input ID of person for change image:<br>
+        {{ form.hidden_tag() }}
+        {{ form.opts_id() }}
+        <ul>
+            {% for error in form.opts_id.errors %}
+            <li> style="color:red;">{{ error }}</li>
+            {% endfor %}
+        </ul>
             Choice new image: <input type="file" name="file"><br><br>
             <input type="submit" value="Upload and Change!" id="upload-button">
         </form>
